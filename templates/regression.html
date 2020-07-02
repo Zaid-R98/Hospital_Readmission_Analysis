@@ -20,18 +20,99 @@
         text-align: center;
         color:white;
     }
+
+    .whiteclass
+    {
+        text-align: left;
+        color:white;
+
+    }
+
+    .submitbutton
+    {
+        padding: 20px;
+    }
+
+    .checksomething
+    {
+        background-color: rgba(10, 9, 9, 0.411);
+    }
+
     </style>
 </head>
 
 <body>
+     {{form.hidden_tag()}}
     <h1 class='heading'>
         Regression Model Deployment
     </h1>
 
     <h3 class='text-muted mini-heading' >
-
         Enter the details below and then let the model predict!
-    
     </h3>
+    <div class="row justify-content-center checksomething">
+                                        <form class="user formtoenter" method="POST" action="">
+                                                {{form.hidden_tag()}}
+
+
+                                        
+                                            <div class="form-group whiteclass">
+                                                {{ form.first.label(class="form-control-label") }}
+                                            </div>
+                                            <div>
+                                                {{ form.first()}}
+                                            </div>
+
+
+
+                                            <div class="form-group whiteclass">
+                                                    {{ form.second.label(class="form-control-label") }}
+                                                </div>
+                                                <div>
+                                                    {{ form.second}}
+                                                </div>
+
+
+
+
+
+                                                <div class="form-group whiteclass">
+                                                        {{ form.third.label(class="form-control-label") }}
+                                                    </div>
+                                                    <div>
+                                                        {{ form.third}}
+                                                    </div>
+
+
+
+
+
+                                                    <div class="form-group whiteclass">
+                                                            {{ form.fourth.label(class="form-control-label") }}
+                                                        </div>
+                                                        <div>
+                                                            {{ form.fourth}}
+                                                        </div>
+
+
+
+
+                                                        <div class="form-group whiteclass">
+                                                                {{ form.fifth.label(class="form-control-label") }}
+                                                            </div>
+                                                            <div>
+                                                                {{ form.fifth}}
+                                                            </div>
+
+
+
+
+
+                                            <div class='text-center submitbutton'>
+                                                    {{ form.submit(class='class="btn btn-primary') }}
+                                            </div>
+                                            
+                                        </form>
+    </div>
 
 </body>
