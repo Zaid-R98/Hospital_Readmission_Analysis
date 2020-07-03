@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from forms import PredictForm
-from tensorflow import keras
+import keras
 import pandas as pd
 import numpy as np
 import joblib
