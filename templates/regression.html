@@ -38,6 +38,12 @@
         background-color: rgba(10, 9, 9, 0.411);
     }
 
+    .prediction
+    {
+        text-align: center;
+        color:white;
+    }
+
     </style>
 </head>
 
@@ -57,19 +63,19 @@
 
                                         
                                             <div class="form-group whiteclass">
-                                                {{ form.first.label(class="form-control-label") }}
+                                                {{ form.age.label(class="form-control-label") }}
                                             </div>
                                             <div>
-                                                {{ form.first()}}
+                                                {{ form.age()}}
                                             </div>
 
 
 
                                             <div class="form-group whiteclass">
-                                                    {{ form.second.label(class="form-control-label") }}
+                                                    {{ form.time_in_hospital.label(class="form-control-label") }}
                                                 </div>
                                                 <div>
-                                                    {{ form.second}}
+                                                    {{ form.time_in_hospital}}
                                                 </div>
 
 
@@ -77,10 +83,10 @@
 
 
                                                 <div class="form-group whiteclass">
-                                                        {{ form.third.label(class="form-control-label") }}
+                                                        {{ form.num_medications.label(class="form-control-label") }}
                                                     </div>
                                                     <div>
-                                                        {{ form.third}}
+                                                        {{ form.num_medications}}
                                                     </div>
 
 
@@ -88,24 +94,105 @@
 
 
                                                     <div class="form-group whiteclass">
-                                                            {{ form.fourth.label(class="form-control-label") }}
+                                                            {{ form.number_diagnoses.label(class="form-control-label") }}
                                                         </div>
                                                         <div>
-                                                            {{ form.fourth}}
+                                                            {{ form.number_diagnoses}}
                                                         </div>
 
 
 
 
                                                         <div class="form-group whiteclass">
-                                                                {{ form.fifth.label(class="form-control-label") }}
+                                                                {{ form.metformin.label(class="form-control-label") }}
                                                             </div>
                                                             <div>
-                                                                {{ form.fifth}}
+                                                                {{ form.metformin}}
+                                                            </div>
+
+                                                
+                                                            <div class="form-group whiteclass">
+                                                                {{ form.chlorpropamide.label(class="form-control-label") }}
+                                                            </div>
+                                                            <div>
+                                                                {{ form.chlorpropamide}}
+                                                            </div>
+
+
+                                                            <div class="form-group whiteclass">
+                                                                {{ form.glimepiride.label(class="form-control-label") }}
+                                                            </div>
+                                                            <div>
+                                                                {{ form.glimepiride}}
                                                             </div>
 
 
 
+
+                                                            <div class="form-group whiteclass">
+                                                                {{ form.tolazamide.label(class="form-control-label") }}
+                                                            </div>
+                                                            <div>
+                                                                {{ form.tolazamide}}
+                                                            </div>
+
+
+
+
+                                                            <div class="form-group whiteclass">
+                                                                {{ form.insulin.label(class="form-control-label") }}
+                                                            </div>
+                                                            <div>
+                                                                {{ form.insulin}}
+                                                            </div>
+
+
+
+
+
+                                                            <div class="form-group whiteclass">
+                                                                {{ form.race.label(class="form-control-label") }}
+                                                            </div>
+                                                            <div>
+                                                                {{ form.race}}
+                                                            </div>
+
+
+
+                                            
+
+                                                            <div class="form-group whiteclass">
+                                                                {{ form.admission_type_id.label(class="form-control-label") }}
+                                                            </div>
+                                                            <div>
+                                                                {{ form.admission_type_id}}
+                                                            </div>
+                                                            
+
+
+                                                            <div class="form-group whiteclass">
+                                                                {{ form.admission_source_id.label(class="form-control-label") }}
+                                                            </div>
+                                                            <div>
+                                                                {{ form.admission_source_id}}
+                                                            </div>
+                                                            
+
+                                                            <div class="form-group whiteclass">
+                                                                {{ form.max_glu_serum.label(class="form-control-label") }}
+                                                            </div>
+                                                            <div>
+                                                                {{ form.max_glu_serum}}
+                                                            </div>
+                                                            
+
+                                                            <div class="form-group whiteclass">
+                                                                {{ form.A1Cresult.label(class="form-control-label") }}
+                                                            </div>
+                                                            <div>
+                                                                {{ form.A1Cresult}}
+                                                            </div>
+                                        
 
 
                                             <div class='text-center submitbutton'>
@@ -113,6 +200,15 @@
                                             </div>
                                             
                                         </form>
+                                        <div class='prediction'>
+                                                <h1>
+                                                        {{prediction_text}}
+                                                </h1>   
+                                        
+                                            </div>
     </div>
+
+   
+   
 
 </body>
