@@ -12,7 +12,7 @@ def indexfunc():
     form=PredictForm()
     model = keras.models.load_model("hospital_model.h5")
     transformer = joblib.load("data_transformer.joblib")
-    prediction_text=' Not Validated Yet..'
+    prediction_text='Result will appear here...'
     if form.validate_on_submit():
         newdict={
                 'age': [str(form.age.data)],
