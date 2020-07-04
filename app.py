@@ -10,7 +10,7 @@ app.config['SECRET_KEY'] = 'thisisjustatest'
 @app.route('/', methods=['GET','POST'])
 def indexfunc():
     form=PredictForm()
-    model = keras.models.load_model("price_prediction_model.h5")
+    model = keras.models.load_model("hospital_model.h5")
     transformer = joblib.load("data_transformer.joblib")
     prediction_text=' Not Validated Yet..'
     if form.validate_on_submit():
@@ -37,10 +37,10 @@ def indexfunc():
         max_index_col = np.argmax(prediction, axis=1)
 
         if max_index_col==0:
-            prediction_text=' The Patient will be readmitted > 30 Times '
+            prediction_text=' The Patient will be readmitted more than 30 Times '
 
         if max_index_col==1:
-            prediction_text=' The Patient will be readmitted < 30 Times '
+            prediction_text=' The Patient will be readmitted less than 30 Times '
 
         if max_index_col==2:
             prediction_text=' The Patient will be not be readmitted '
